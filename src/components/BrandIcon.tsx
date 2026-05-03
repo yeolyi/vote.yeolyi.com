@@ -1,7 +1,6 @@
 import {
   siKakaotalk,
   siGoogle,
-  siApple,
   siGithub,
   type SimpleIcon,
 } from "simple-icons/icons";
@@ -9,7 +8,6 @@ import {
 const ICONS: Record<string, SimpleIcon> = {
   kakao: siKakaotalk,
   google: siGoogle,
-  apple: siApple,
   github: siGithub,
 };
 

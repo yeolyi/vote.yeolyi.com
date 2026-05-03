@@ -6,7 +6,7 @@ import SplitBg from "./SplitBg";
 import Countdown from "./Countdown";
 import Footer from "./Footer";
 
-type Provider = "kakao" | "google" | "apple" | "github";
+type Provider = "kakao" | "google" | "github";
 
 const PROVIDERS: {
   id: Provider;
@@ -23,11 +23,6 @@ const PROVIDERS: {
     label: "Google로 시작하기",
     className:
       "bg-white text-black border border-black/10 hover:bg-white/90",
-  },
-  {
-    id: "apple",
-    label: "Apple로 시작하기",
-    className: "bg-black text-white hover:bg-black/90",
   },
   {
     id: "github",
