@@ -25,9 +25,6 @@ export default function ResultScreen({ myVote }: { myVote: "red" | "blue" }) {
 
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 py-16 text-white">
         <div className="mb-12 flex flex-col items-center text-center">
-          <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-white/70">
-            투표 완료
-          </p>
           <div
             className="mb-6 h-32 w-32 rounded-full shadow-2xl ring-8 ring-white/30 sm:h-40 sm:w-40"
             style={{
