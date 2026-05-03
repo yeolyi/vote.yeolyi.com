@@ -76,13 +76,20 @@ export default function VoteScreen() {
     <>
       <SplitBg highlight={hover} />
       <div className="relative z-10 flex min-h-screen flex-col items-center justify-center px-6 py-16 text-white">
-        <div className="mb-12 text-center">
+        <div className="mb-10 flex flex-col items-center text-center">
           <p className="mb-3 text-xs font-medium uppercase tracking-[0.2em] text-white/70">
             한 번 누르면 변경할 수 없습니다
           </p>
           <h1 className="text-balance text-5xl font-bold tracking-tight sm:text-6xl">
             당신의 선택은?
           </h1>
+          <p className="mt-5 max-w-md text-balance text-sm leading-relaxed text-white/80 sm:text-base">
+            지구상 모든 사람이 비밀투표로 빨강이나 파랑을 누른다.
+            <br />
+            파랑이 절반을 넘으면 <b>전원 생존</b>, 미만이면 <b>빨강만 생존</b>.
+            <br />
+            당신은 어느 쪽을 누르겠습니까?
+          </p>
         </div>
 
         <div className="grid w-full max-w-2xl grid-cols-1 gap-4 sm:grid-cols-2">
