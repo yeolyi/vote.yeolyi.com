@@ -17,19 +17,19 @@ const PROVIDERS: {
     id: "kakao",
     label: "카카오로 로그인",
     className: "bg-[#FEE500] hover:bg-[#FEE500]/90",
-    iconClassName: "h-7 w-7 text-black",
+    iconClassName: "h-5 w-5 text-black",
   },
   {
     id: "google",
     label: "Google로 로그인",
     className: "bg-white hover:bg-white/90 border border-black/10",
-    iconClassName: "h-7 w-7",
+    iconClassName: "h-5 w-5",
   },
   {
     id: "github",
     label: "GitHub로 로그인",
     className: "bg-[#1f2328] hover:bg-[#1f2328]/90",
-    iconClassName: "h-6 w-6 text-white",
+    iconClassName: "h-[18px] w-[18px] text-white",
   },
 ];
 
@@ -73,24 +73,29 @@ export default function LoginCard({ totalCount }: { totalCount: number }) {
           <Countdown />
         </div>
 
-        <div className="flex items-center gap-4">
-          {PROVIDERS.map((p) => (
-            <button
-              key={p.id}
-              type="button"
-              aria-label={p.label}
-              title={p.label}
-              disabled={pending !== null}
-              onClick={() => login(p.id)}
-              className={`flex h-14 w-14 items-center justify-center rounded-full shadow-md transition active:scale-[0.95] disabled:opacity-60 ${p.className}`}
-            >
-              {pending === p.id ? (
-                <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
-              ) : (
-                <BrandIcon brand={p.id} className={p.iconClassName} />
-              )}
-            </button>
-          ))}
+        <div className="flex flex-col items-center">
+          <p className="mb-3 text-xs font-medium text-white/70">
+            로그인 후 투표하기
+          </p>
+          <div className="flex items-center gap-3">
+            {PROVIDERS.map((p) => (
+              <button
+                key={p.id}
+                type="button"
+                aria-label={p.label}
+                title={p.label}
+                disabled={pending !== null}
+                onClick={() => login(p.id)}
+                className={`flex h-11 w-11 items-center justify-center rounded-full shadow-md transition active:scale-[0.95] disabled:opacity-60 ${p.className}`}
+              >
+                {pending === p.id ? (
+                  <span className="h-4 w-4 animate-spin rounded-full border-2 border-current border-t-transparent" />
+                ) : (
+                  <BrandIcon brand={p.id} className={p.iconClassName} />
+                )}
+              </button>
+            ))}
+          </div>
         </div>
 
         <p className="mt-10 text-xs text-white/70">
