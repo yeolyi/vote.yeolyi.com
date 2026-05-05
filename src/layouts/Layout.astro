@@ -17,7 +17,10 @@ const ogImage = `${siteUrl}/og.png`;
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
     <meta name="description" content={description} />
     <link rel="canonical" href={siteUrl} />
 
@@ -47,6 +50,17 @@ const ogImage = `${siteUrl}/og.png`;
     <Analytics />
   </head>
   <body>
+    <!-- iOS 26 Safari Liquid Glass: 하단 툴바가 샘플링할 검정 shim -->
+    <div
+      aria-hidden="true"
+      style="position:fixed;left:0;right:0;bottom:-3px;height:6px;background:#000;z-index:9999;pointer-events:none;"
+    >
+    </div>
+    <div
+      aria-hidden="true"
+      style="position:fixed;left:0;right:0;top:-3px;height:6px;background:#000;z-index:9999;pointer-events:none;"
+    >
+    </div>
     <slot />
   </body>
 </html>
