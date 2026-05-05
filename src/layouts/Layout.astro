@@ -1,5 +1,6 @@
 ---
 import "../styles/global.css";
+import Analytics from "@vercel/analytics/astro";
 import { SITE_TITLE, SITE_DESC } from "../lib/constants";
 
 interface Props {
@@ -43,6 +44,7 @@ const ogImage = `${siteUrl}/og.png`;
     <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="theme-color" content="#7c2030" />
     <title>{title}</title>
+    <Analytics />
   </head>
   <body>
     <slot />
